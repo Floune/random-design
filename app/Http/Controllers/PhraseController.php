@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cadavre;
+use App\Http\Requests\PhraseStoreRequest;
 use App\Phrase;
 use App\Phrasef;
 use App\Phrasem;
@@ -16,7 +17,7 @@ class PhraseController extends Controller
         return view('haiku.create');
     }
 
-    public function store(Request $request) {
+    public function store(PhraseStoreRequest $request) {
         $phrase = new Phrase();
         $phrasem = new Phrasem();
         $phrasef = new Phrasef();
