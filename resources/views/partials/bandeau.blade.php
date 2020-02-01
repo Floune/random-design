@@ -1,3 +1,6 @@
 <div class="bandeau">
-    <h1 class="mainTitre">{{$phrase}}</h1>
+    <div class="phrase">
+        <h1 class="">{{$phrase}}</h1>
+    </div>
+    <button class="encore">encore</button>
 </div>

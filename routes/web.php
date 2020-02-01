@@ -14,3 +14,5 @@
 Route::get('/', 'PostController@index')->name('home');
 Route::get('/create', 'PostController@create')->name('create');
 Route::post('/post', 'PostController@store')->name('post');
+
+Route::get('/phrase', 'PhraseController@reroll')->name('reroll');

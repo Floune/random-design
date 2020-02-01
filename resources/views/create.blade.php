@@ -9,7 +9,6 @@
 </head>
 @php
     $randColor = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)
-
 @endphp
 <body style="background-color: {{$randColor}}">
 
@@ -42,7 +41,7 @@
             </div>
 
             <div class="rotatingI" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
-            <span class="retour"><a href="{{route('home')}}"><button class="nouveau">RETOUR</button></a></span>
+            <span class="retour"><a href="{{route('home')}}"><button class="nouveau">retour</button></a></span>
             </div>
 
         </div>
