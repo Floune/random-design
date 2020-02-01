@@ -6,10 +6,8 @@
         <title>Ghetto</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
-    @php
-        $randColor = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)
-    @endphp
-    <body style="background-color: {{$randColor}};">
+
+    <body style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}};">
         <div style="margin-bottom: 20px;">
             @include('partials.bandeau', ['phrase' => $phrase] )
         </div>
@@ -34,11 +32,7 @@
                 <button id="runaway">Gagner 1000000000000 euros</button>
             </div>
         <script src="{{asset('jquery.js')}}"></script>
-        <script src="{{asset('js/reroll.js')}}">
-
-        </script>
-        <script src="{{asset('js/runaway.js')}}">
-
-        </script>
+        <script src="{{asset('js/reroll.js')}}"></script>
+        <script src="{{asset('js/runaway.js')}}"></script>
     </body>
 </html>

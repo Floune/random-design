@@ -1,6 +1,7 @@
 <div class="bandeau">
     <div class="phrase">
-        <h1 class="">{{$phrase}}</h1>
+
     </div>
-    <button class="encore">encore</button>
+    <button class="encore">Nouveau style, Nouveau haiku</button>
+    <a href="{{route('haiku')}}"><button class="contrib">Contribuer aux haikus</div></a>
 </div>

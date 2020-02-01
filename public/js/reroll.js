@@ -1,10 +1,15 @@
 $('.encore').on('click', function(e) {
 
     $.get("/phrase", function (response) {
-        $('.phrase').html('<h1>' + response.phrase.toUpperCase() + '</h1>');
+        $('.phrase').html('<h3>' + JSON.parse(response.phrase)[0] + '</h3> <h3>' + JSON.parse(response.phrase)[1] + '</h3> <h3>' + JSON.parse(response.phrase)[2] + '</h3>'
+    );
         $('body').css('background-color', response.bodyColor);
         transformBarres(response);
     });
+
+});
+
+$('.contrib').on('click', function(e) {
 
 });
 

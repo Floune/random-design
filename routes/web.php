@@ -16,3 +16,7 @@ Route::get('/create', 'PostController@create')->name('create');
 Route::post('/post', 'PostController@store')->name('post');
 
 Route::get('/phrase', 'PhraseController@reroll')->name('reroll');
+
+Route::get('/haiku', 'PhraseController@create')->name('haiku');
+Route::post('/haiku', 'PhraseController@store')->name('haiku.post');
+

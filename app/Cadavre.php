@@ -7,22 +7,24 @@ namespace App;
 class Cadavre
 {
 
-    private $verbes;
-    private $cods;
+    private $phrase1;
+    private $phrase2;
+    public $phrase3;
     public $phrase;
 
     public function __construct() {
-        $this->verbes = config('phrases.verbes');
-        $this->cods = config('phrases.cods');
         $this->phrase = $this->setPhrase();
     }
 
     private function setPhrase() {
-        return $this->verbes[rand(0, sizeof($this->verbes) - 1)] . ' ' . $this->cods[rand(0, sizeof($this->cods) - 1)];
+        $part1 = Phrase::find(random_int(1, Phrase::all()->count()))->text;
+        $part2 = Phrasem::find(random_int(1, Phrasem::all()->count()))->text;
+        $part3 = Phrasef::find(random_int(1, Phrasef::all()->count()))->text;
+        return [$part1, $part2, $part3];
     }
 
     public function getPhrase() {
-        return $this->phrase;
+        return json_encode($this->phrase);
     }
 
 }
