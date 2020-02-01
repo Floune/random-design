@@ -117,3 +117,4 @@ $('#runaway-container').on('mouseover', function(e) {
 $('#runaway-container').on('click', function(e) {
     initsnow();
 });
+
