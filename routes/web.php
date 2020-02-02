@@ -19,4 +19,5 @@ Route::get('/phrase', 'PhraseController@reroll')->name('reroll');
 
 Route::get('/haiku', 'PhraseController@create')->name('haiku');
 Route::post('/haiku', 'PhraseController@store')->name('haiku.post');
+Route::get('/photo/{id}', 'PhotoController@resolvePhoto')->where('path', '.*')->name('photo');
 
