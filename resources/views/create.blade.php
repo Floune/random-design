@@ -37,15 +37,17 @@
             </div>
 
             <div class="rotating" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
-                <input type="submit">
-            </div>
 
-            <div class="rotatingI" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
-            <span class="retour"><a href="{{route('home')}}"><button class="nouveau">retour</button></a></span>
+                <button class="submit">Merde</button>
             </div>
 
         </div>
+
     </form>
+
+    <div class="rotatingI" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
+        <span class="retour"><a href="{{route('home')}}"><button>retour</button></a></span>
+    </div>
 </div>
 </body>
 </html>

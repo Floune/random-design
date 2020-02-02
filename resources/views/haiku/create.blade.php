@@ -32,11 +32,15 @@
             </div>
 
             <div class="rotatingI" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
-                <input type="submit">
+                <button class="submit">Merde</button>
             </div>
-
         </div>
     </form>
+
+    <div class="rotating" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
+        <a href="{{route('home')}}"><button class="retour">retour</button></a>
+    </div>
+    
 </div>
 </body>
 </html>

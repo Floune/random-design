@@ -15,7 +15,7 @@ class CreatePhrasefsTable extends Migration
     {
         Schema::create('phrasefs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('text', 40);
+            $table->string('text', 40)->unique();
             $table->timestamps();
         });
     }

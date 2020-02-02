@@ -1,10 +1,10 @@
-APIVersion: v1.12.0
+APIVersion: v1.12.2
 name: john
 type: php
 docroot: public
 php_version: "7.2"
 webserver_type: nginx-fpm
-router_http_port: "80"
+router_http_port: "8080"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
@@ -15,8 +15,8 @@ use_dns_when_possible: true
 timezone: ""
 
 
-# This config.yaml was created with ddev version v1.12.0
-# webimage: drud/ddev-webserver:v1.12.1
+# This config.yaml was created with ddev version v1.12.2
+# webimage: drud/ddev-webserver:v1.12.2
 # dbimage: drud/ddev-dbserver-mariadb-10.2:v1.12.0
 # dbaimage: drud/phpmyadmin:v1.12.0
 # bgsyncimage: drud/ddev-bgsync:v1.12.0
@@ -155,3 +155,4 @@ timezone: ""
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
 #hooks:
+
