@@ -7,11 +7,21 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
 
+    @php
+        $randColor = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)
+    @endphp
+
     <body style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}};">
         <div style="margin-bottom: 20px;">
             @include('partials.bandeau', ['phrase' => $phrase] )
         </div>
             <div class="content">
+
+                <div class="zguegue-button">
+                    <div class="zguegue-button2">
+                        <a class="blink-zguegue" href="{{route('zguegue')}}" style=" color: {{$randColor}} ">ZGUEGUE</a>
+                    </div>
+                </div>
 
                 <div class="new-post">
                     <a href="{{route('create')}}"><button>nouveau scandale</button></a>
