@@ -22,7 +22,7 @@ class PhotoController extends Controller
         ]);
     }
     public function resolvePhoto(Request $request) {
-         $id = explode('/' , $request->q)[2];
+         $id = $request->get('id');
          $path = Post::find($id)->image;
          return $this->server->getImageResponse($path, $request->all());
     }
