@@ -67,3 +67,100 @@ ul {
     background-color: royalblue;
 }
 
+.zguegue-button {
+    width: 200px;
+    height: 200px;
+    background-color: #004A7F;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite, x 13s linear infinite alternate;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite, x 13s linear infinite alternate;
+}
+
+.zguegue-button2 {
+    position: absolute;
+    box-sizing: border-box;
+    animation: opacity 2s ease-in-out infinite, y 13s linear infinite alternate;
+    -webkit-animation: y 13s linear infinite alternate;
+}
+
+.blink-zguegue {
+    opacity: 1;
+    text-decoration: none;
+}
+
+@-webkit-keyframes glowing {
+    0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+    0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@-webkit-keyframes x {
+    100% {
+        -webkit-transform: translateX(calc(100vw - 200px));
+        transform: translateX(calc(100vw - 200px));
+    }
+}
+
+@keyframes x {
+    100% {
+        -webkit-transform: translateX(calc(100vw - 200px));
+        transform: translateX(calc(100vw - 200px));
+    }
+}
+@-webkit-keyframes y {
+    100% {
+        -webkit-transform: translateY(calc(100vh - 200px));
+        transform: translateY(calc(100vh - 200px));
+    }
+}
+@keyframes y {
+    100% {
+        -webkit-transform: translateY(calc(100vh - 200px));
+        transform: translateY(calc(100vh - 200px));
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+

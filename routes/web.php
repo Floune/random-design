@@ -13,6 +13,8 @@
 
 Route::get('/', 'PostController@index')->name('home');
 Route::get('/create', 'PostController@create')->name('create');
+Route::post('/zguegue', 'ZguegueController@zguegue')->name('zguegue.post');
+Route::get('/zguegue', 'ZguegueController@zguegue')->name('zguegue');
 Route::post('/post', 'PostController@store')->name('post');
 
 Route::get('/phrase', 'PhraseController@reroll')->name('reroll');
