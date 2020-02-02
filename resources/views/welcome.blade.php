@@ -34,5 +34,8 @@
         <script src="{{asset('jquery.js')}}"></script>
         <script src="{{asset('js/reroll.js')}}"></script>
         <script src="{{asset('js/runaway.js')}}"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="{{asset('js/draggable.js')}}"></script>
     </body>
 </html>

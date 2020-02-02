@@ -1,4 +1,4 @@
-<div class="bandeau">
+<div class="bandeau" id="draggable">
     <div class="phrase">
 
     </div>
