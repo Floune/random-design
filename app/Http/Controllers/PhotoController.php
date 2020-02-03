@@ -24,6 +24,10 @@ class PhotoController extends Controller
     public function resolvePhoto(Request $request) {
          $id = $request->get('id');
          $path = Post::find($id)->image;
+         //cradox
+         if (explode('.', $path)[1] === 'gif') {
+             return response()->file(public_path('/uploads/ghetto/' . $path));
+         }
          return $this->server->getImageResponse($path, $request->all());
     }
 }
