@@ -88,6 +88,10 @@ ul {
     animation: glowing 1500ms infinite, x 13s linear infinite alternate;
 }
 
+#runaway {
+    position: absolute;
+}
+
 .zguegue-button2 {
     position: absolute;
     box-sizing: border-box;
