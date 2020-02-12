@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('titre')->nullable();
             $table->text('corps')->nullable();
             $table->text('image')->nullable();
+            $table->text('utub')->nullable();
             $table->timestamps();
         });
     }

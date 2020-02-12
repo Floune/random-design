@@ -43,6 +43,11 @@ class PostController extends Controller
     public function store(PostStoreRequest $request)
     {
         $post = new Post();
+        $rx = "^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+^";
+        $has_match = preg_match($rx, $request->input('utub'), $matches);
+        if ($has_match) {
+            $post->utub = $this->convertYoutube($request->input('utub'));
+        }
         $post->titre = $request->input('titre');
         $post->auteur = $request->input('auteur') ? $request->input('auteur') : 'anonyme';
         $post->corps = $request->input('corps');
@@ -57,6 +62,14 @@ class PostController extends Controller
 
         $post->save();
         return redirect('/');
+    }
+
+    function convertYoutube($string) {
+        return preg_replace(
+            "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
+            "<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/$2\" allowfullscreen></iframe>",
+            $string
+        );
     }
 
 }

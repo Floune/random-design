@@ -32,8 +32,13 @@
             </div>
 
             <div  class="rotatingI" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
-            <label for="image">Image</label>
-            <input type="file" name="image">
+                <label for="image">Image</label>
+                <input type="file" name="image">
+            </div>
+
+            <div  class="rotatingI" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">
+                <label for="utub">youtube</label>
+                <input type="text" name="utub">
             </div>
 
             <div class="rotating" style="width: 200px; margin: {{random_int(0, 10)}}px {{random_int(0, 80)}}%">

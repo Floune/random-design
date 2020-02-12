@@ -12,6 +12,7 @@
     @endphp
 
     <body style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}};">
+        <button id="runaway">Ce site utilise des cookies et tout le monde s'en branle</button>
         <div style="margin-bottom: 20px;">
             @include('partials.bandeau', ['phrase' => $phrase] )
         </div>
@@ -38,9 +39,7 @@
                 </div>
             </div>
 
-            <div id="runaway-container">
-                <button id="runaway">Gagner 1000000000000 euros</button>
-            </div>
+
         <script src="{{asset('jquery.js')}}"></script>
         <script src="{{asset('js/reroll.js')}}"></script>
         <script src="{{asset('js/runaway.js')}}"></script>

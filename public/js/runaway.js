@@ -13,7 +13,7 @@ var snowcolor=new Array("#aaaacc","#ddddff","#ccccdd","#f3f3f3","#f0ffff")
 var snowtype=new Array("Times","Arial","Times","Verdana")
 
 // Set the letter that creates your snowflake (recommended: * )
-var snowletter="PROUT"
+var snowletter="RGPD"
 
 // Set the speed of sinking (recommended values range from 0.3 to 2)
 var sinkspeed=0.6
@@ -112,17 +112,16 @@ $('#runaway').on('mouseover', function(e) {
     var color = ['#008CBA', '#bb928c', '#452355']
     $('#runaway').css('margin-left', Math.random() * 300)
     $('#runaway').css('margin-top', Math.random() * 300)
-    $('#runaway').css('width', Math.random() * (500 - 150) + 150)
-    $('#runaway').css('height', Math.random() * (200 - 50) + 50)
+    $('#runaway').css('width', Math.random() * (500 - 300) + 150)
+    $('#runaway').css('height', Math.random() * (260 - 100) + 100)
     $('#runaway').css('border-style', 'dashed 15px')
     $('#runaway').css('border-color', 'pink')
     $('#runaway').css('border-radius', Math.random() * 10 + 'px')
     $('#runaway').css('font-size-adjust', 50)
     $('#runaway').css('background-color', color[Math.floor(Math.random() * color.length)])
-    console.log(Math.floor(Math.random() * color.length))
 });
 
-$('#runaway-container').on('click', function(e) {
+$('#runaway').on('click', function(e) {
     initsnow();
 });
 
